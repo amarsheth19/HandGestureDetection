@@ -37,18 +37,6 @@ with mp_pose.Pose(static_image_mode = True) as pose:
                         cv2.putText(img2, "We Have a Volunteer as Tribute", (50, 50), 0, 1, 255)
             cv2.imshow('Hands Marked', img2)
 
-            """if result.pose_landmarks:
-                if results.multi_hand_landmarks:
-                    for hand_landmarks in results.multi_hand_landmarks:
-                        mp_drawing.draw_landmarks(img, hand_landmarks, mp_hands.HAND_CONNECTIONS, mp_drawing_styles.get_default_hand_landmarks_style(), mp_drawing_styles.get_default_hand_connections_style())
-                        if hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_TIP].y < hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_DIP].y and hand_landmarks.landmark[mp_hands.HandLandmark.MIDDLE_FINGER_TIP].y < hand_landmarks.landmark[mp_hands.HandLandmark.MIDDLE_FINGER_DIP].y and hand_landmarks.landmark[mp_hands.HandLandmark.RING_FINGER_TIP].y < hand_landmarks.landmark[mp_hands.HandLandmark.RING_FINGER_DIP].y and hand_landmarks.landmark[mp_hands.HandLandmark.PINKY_TIP].y > hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_PIP].y and hand_landmarks.landmark[mp_hands.HandLandmark.PINKY_TIP].y > hand_landmarks.landmark[mp_hands.HandLandmark.THUMB_TIP].y:
-                            cv2.putText(img, "We Have a Volunteer as Tribute", (50, 50), 0, 1, 255)
-                        elif result.pose_landmarks.landmark[mp_pose.PoseLandmark.RIGHT_SHOULDER].y > result.pose_landmarks.landmark[mp_pose.PoseLandmark.RIGHT_WRIST].y or result.pose_landmarks.landmark[mp_pose.PoseLandmark.LEFT_SHOULDER].y > result.pose_landmarks.landmark[mp_pose.PoseLandmark.LEFT_WRIST].y:
-                            cv2.putText(img, "Hand is Raised", (50, 50), 0, 2, 255)
-            """
-
-
-
             key = cv2.waitKey(1)
             if key == 27:
                 break
